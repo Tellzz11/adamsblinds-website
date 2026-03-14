@@ -39,7 +39,7 @@
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "reviewCount": "847"
+    "reviewCount": "129"
   },
   "openingHours": ["Mo-Fr 08:00-18:00", "Sa 09:00-17:00"]
 }
@@ -559,7 +559,7 @@ ul { list-style: none; }
      ANNOUNCEMENT BAR
      ============================================================ -->
 <div id="announce-bar" role="banner">
-  <span>Free home survey, free measuring, free fitting advice — <a href="#free-consultation">Book your visit today</a></span>
+  <span>Limited survey slots available this month — <a href="#free-consultation">Book your free home survey now</a></span>
   <button class="announce-close" id="announce-close" aria-label="Dismiss announcement">×</button>
 </div>
 
@@ -581,7 +581,7 @@ ul { list-style: none; }
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 9.5 19.79 19.79 0 01.67 4.88 2 2 0 012.66 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.77 9.91a16 16 0 006.29 6.29l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
         020 7096 5030
       </a>
-      <a href="#free-consultation" class="nav-cta">Free Consultation</a>
+      <a href="#free-consultation" class="nav-cta">Book Free Survey</a>
     </div>
     <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
       <span></span><span></span><span></span>
@@ -599,7 +599,7 @@ ul { list-style: none; }
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a href="#free-consultation" class="mobile-cta">Book Free Consultation</a>
+  <a href="#free-consultation" class="mobile-cta">Book Your FREE Survey</a>
 </div>
 
 <!-- ============================================================
@@ -607,7 +607,7 @@ ul { list-style: none; }
      ============================================================ -->
 <section id="hero" aria-label="Welcome to Adams Blinds">
   <div class="hero-video-bg"></div>
-  <video id="hero-video" autoplay muted loop playsinline poster="website_upgrade/shutter_open.png" aria-hidden="true">
+  <video id="hero-video" autoplay muted loop playsinline preload="none" poster="website_upgrade/shutter_open.png" aria-hidden="true">
     <source src="website_upgrade/shutter_animation_min.mp4" type="video/mp4">
   </video>
   <div class="hero-overlay"></div>
@@ -1015,7 +1015,7 @@ ul { list-style: none; }
 <section id="adams-difference" aria-label="The Adams Blinds Difference">
   <div class="difference-grid">
     <div class="difference-img-wrap reveal-left">
-      <img src="website_upgrade/product_images/prod_venetian_new.png" alt="Handcrafted wooden venetian blinds in a beautifully designed London living room">
+      <img loading="lazy" src="website_upgrade/product_images/prod_venetian_new.png" alt="Handcrafted wooden venetian blinds in a beautifully designed London living room">
     </div>
     <div class="difference-content">
       <div class="section-eyebrow reveal">
@@ -1427,7 +1427,7 @@ ul { list-style: none; }
      BEFORE / AFTER
      ============================================================ -->
 <section id="before-after" aria-label="Before and after transformation">
-  <img class="before-after-img" src="ba_shutters.png" alt="Before and after: tired sash window transformed with crisp white plantation shutters by Adams Blinds">
+  <img class="before-after-img" loading="lazy" src="ba_shutters.png" alt="Before and after: tired sash window transformed with crisp white plantation shutters by Adams Blinds">
   <div class="before-after-overlay">
     <div class="before-after-content">
       <span class="label-caps reveal">Real Transformations</span>
@@ -1475,7 +1475,7 @@ ul { list-style: none; }
     <div class="products-carousel" id="products-carousel">
       <div class="product-card">
         <div style="position:relative;">
-          <img class="product-card-img" src="website_upgrade/product_images/prod_shutters_new.png" alt="Plantation shutters in a period London townhouse">
+          <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_shutters_new.png" alt="Plantation shutters in a period London townhouse">
           <span style="position:absolute;top:0.9rem;left:0.9rem;background:var(--terracotta);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:2px;">Most Popular</span>
         </div>
         <div class="product-card-body">
@@ -1487,7 +1487,7 @@ ul { list-style: none; }
       </div>
       <div class="product-card">
         <div style="position:relative;">
-          <img class="product-card-img" src="website_upgrade/product_images/prod_motorised_new.png" alt="Motorised roller blinds on a skylight with remote control">
+          <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_motorised_new.png" alt="Motorised roller blinds on a skylight with remote control">
           <span style="position:absolute;top:0.9rem;left:0.9rem;background:var(--brass);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:2px;">Smart Home Ready</span>
         </div>
         <div class="product-card-body">
@@ -1498,7 +1498,7 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card-img" src="website_upgrade/product_images/prod_roman_new.png" alt="Roman blinds in a master bedroom with brass bed frame">
+        <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_roman_new.png" alt="Roman blinds in a master bedroom with brass bed frame">
         <div class="product-card-body">
           <div class="product-card-type">Roman Blinds</div>
           <div class="product-card-name">Roman Blinds</div>
@@ -1507,7 +1507,7 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card-img" src="website_upgrade/product_images/prod_venetian_new.png" alt="Wooden venetian blinds in a bright home office">
+        <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_venetian_new.png" alt="Wooden venetian blinds in a bright home office">
         <div class="product-card-body">
           <div class="product-card-type">Venetian Blinds</div>
           <div class="product-card-name">Venetian Blinds</div>
@@ -1516,7 +1516,7 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card-img" src="website_upgrade/product_images/prod_curtains_new.png" alt="Floor-length curtains framing a bay window in a Victorian London home">
+        <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_curtains_new.png" alt="Floor-length curtains framing a bay window in a Victorian London home">
         <div class="product-card-body">
           <div class="product-card-type">Curtains</div>
           <div class="product-card-name">Curtains &amp; Drapes</div>
@@ -1525,7 +1525,7 @@ ul { list-style: none; }
         </div>
       </div>
       <div class="product-card">
-        <img class="product-card-img" src="website_upgrade/product_images/prod_daynight_new.png" alt="Day/night vision blinds in a modern open-plan London kitchen">
+        <img class="product-card-img" loading="lazy" src="website_upgrade/product_images/prod_daynight_new.png" alt="Day/night vision blinds in a modern open-plan London kitchen">
         <div class="product-card-body">
           <div class="product-card-type">Day/Night Blinds</div>
           <div class="product-card-name">Day/Night Blinds</div>
@@ -1555,7 +1555,7 @@ ul { list-style: none; }
   <div class="shop-grid">
     <div class="shop-card reveal" data-cat="shutters" style="position:relative;">
       <span style="position:absolute;top:0.9rem;left:0.9rem;background:var(--terracotta);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:2px;z-index:2;">Most Popular</span>
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_shutters_new.png" alt="Plantation shutter louvres with light streaming through">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_shutters_new.png" alt="Plantation shutter louvres with light streaming through">
       <div class="shop-card-body">
         <div class="shop-card-cat">Shutters</div>
         <div class="shop-card-name">Plantation Shutters</div>
@@ -1564,7 +1564,7 @@ ul { list-style: none; }
     </div>
     <div class="shop-card reveal reveal-delay-1" data-cat="motorised" style="position:relative;">
       <span style="position:absolute;top:0.9rem;left:0.9rem;background:var(--brass);color:#fff;font-size:0.62rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.3rem 0.7rem;border-radius:2px;z-index:2;">Smart Home Ready</span>
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_motorised_new.png" alt="Motorised blind with smart home app on phone">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_motorised_new.png" alt="Motorised blind with smart home app on phone">
       <div class="shop-card-body">
         <div class="shop-card-cat">Smart Blinds</div>
         <div class="shop-card-name">Motorised Blinds</div>
@@ -1572,7 +1572,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="shop-card reveal reveal-delay-2" data-cat="blinds">
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_roman_new.png" alt="Roman blind fabric folds in warm linen">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_roman_new.png" alt="Roman blind fabric folds in warm linen">
       <div class="shop-card-body">
         <div class="shop-card-cat">Roman Blinds</div>
         <div class="shop-card-name">Roman Blinds</div>
@@ -1580,7 +1580,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="shop-card reveal" data-cat="blinds">
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_roller_new.png" alt="Roller blind fabric with light filtering through">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_roller_new.png" alt="Roller blind fabric with light filtering through">
       <div class="shop-card-body">
         <div class="shop-card-cat">Roller Blinds</div>
         <div class="shop-card-name">Roller Blinds</div>
@@ -1588,7 +1588,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="shop-card reveal reveal-delay-1" data-cat="blinds">
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_venetian_new.png" alt="Venetian blind slats with afternoon sun shadows">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_venetian_new.png" alt="Venetian blind slats with afternoon sun shadows">
       <div class="shop-card-body">
         <div class="shop-card-cat">Venetian Blinds</div>
         <div class="shop-card-name">Venetian Blinds</div>
@@ -1596,7 +1596,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="shop-card reveal reveal-delay-2" data-cat="curtains">
-      <img class="shop-card-img" src="website_upgrade/product_images/prod_curtains_new.png" alt="Curtain fabric draping detail in warm linen">
+      <img class="shop-card-img" loading="lazy" src="website_upgrade/product_images/prod_curtains_new.png" alt="Curtain fabric draping detail in warm linen">
       <div class="shop-card-body">
         <div class="shop-card-cat">Curtains</div>
         <div class="shop-card-name">Curtains &amp; Drapes</div>
@@ -1969,7 +1969,7 @@ ul { list-style: none; }
       <div class="testimonials-rating reveal reveal-delay-2">
         <div class="stars">★★★★★</div>
         <div class="rating-num">4.9</div>
-        <div class="rating-label">847 Google reviews</div>
+        <div class="rating-label">129 Google reviews</div>
       </div>
     </div>
     <div class="testimonial-featured reveal">
@@ -2053,6 +2053,10 @@ ul { list-style: none; }
       </div>
       <button class="calc-submit" id="calc-btn" type="button">Get My Estimate</button>
       <p style="font-size:0.7rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:0.6rem;">Takes 30 seconds. No obligation whatsoever.</p>
+      <div id="calc-book-prompt" style="display:none;margin-top:1.2rem;padding:1.2rem;background:rgba(194,112,79,0.12);border:1px solid rgba(194,112,79,0.3);border-radius:3px;text-align:center;">
+        <p style="font-size:0.86rem;color:rgba(255,255,255,0.8);margin-bottom:0.8rem;">Lock in this price with a free home survey — we'll confirm exact costs when we visit.</p>
+        <a href="#free-consultation" class="btn-primary" style="display:inline-flex;width:auto;">Book Your FREE Survey →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -2068,11 +2072,11 @@ ul { list-style: none; }
   </div>
   <div class="gallery-masonry">
     <div class="gallery-item reveal">
-      <img src="gallery_shutters.png" alt="Dramatic full-room plantation shutters in a bright London apartment">
+      <img loading="lazy" src="gallery_shutters.png" alt="Dramatic full-room plantation shutters in a bright London apartment">
       <div class="gallery-item-overlay"><span class="gallery-item-label">Plantation Shutters — Islington</span></div>
     </div>
     <div class="gallery-item reveal reveal-delay-1">
-      <img src="gallery_motorised.png" alt="Controlling motorised blinds with phone app in a bright bedroom">
+      <img loading="lazy" src="gallery_motorised.png" alt="Controlling motorised blinds with phone app in a bright bedroom">
       <div class="gallery-item-overlay"><span class="gallery-item-label">Smart Motorised Blinds</span></div>
     </div>
     <div class="gallery-item reveal reveal-delay-2">
@@ -2719,7 +2723,7 @@ ul { list-style: none; }
 <section id="free-samples" aria-label="Order free fabric samples">
   <div class="samples-grid">
     <div class="samples-img-wrap reveal-left">
-      <img src="samples.png" alt="Premium fabric swatches from Adams Blinds — order free samples">
+      <img loading="lazy" src="samples.png" alt="Premium fabric swatches from Adams Blinds — order free samples">
     </div>
     <div class="samples-content">
       <span class="label-caps reveal">Try Before You Buy</span>
@@ -2810,7 +2814,7 @@ ul { list-style: none; }
       </div>
     </div>
     <div class="about-img-wrap reveal-right">
-      <img src="team.png" alt="The Adams Blinds team — London's trusted window dressing specialists">
+      <img loading="lazy" src="team.png" alt="The Adams Blinds team — London's trusted window dressing specialists">
       <div class="about-img-badge">
         <span class="about-img-badge-num">★ 4.9</span>
         <span class="about-img-badge-label">Google Rating</span>
@@ -3421,6 +3425,8 @@ ul { list-style: none; }
       const high = Math.round(unitPrice * qty * 1.25 / 5) * 5;
       calcPrice.textContent = '£' + low.toLocaleString() + '–£' + high.toLocaleString();
       calcResult.classList.add('visible');
+      const bookPrompt = document.getElementById('calc-book-prompt');
+      if (bookPrompt) bookPrompt.style.display = 'block';
       calcResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     });
   }
