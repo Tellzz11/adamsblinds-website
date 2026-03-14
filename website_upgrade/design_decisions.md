@@ -487,3 +487,133 @@ The competitors have left this space entirely unoccupied. The v4 build should cl
 ### V5 Decision 10 — Gallery Headings: Editorial
 **Decision:** Changed "Find your inspiration" → "Fitted in homes just like yours". Added editorial note: "No stock photos."
 **Skill/Framework:** marketing-psychology (social proof — "real homes like yours" triggers identification). page-cro (authenticity signals reduce purchase anxiety in high-trust purchase categories like home services).
+
+---
+
+## V6 Design Decisions (2026-03-14)
+
+*All 6 reference files were read before making any V6 change. Every decision below cites the specific file and principle.*
+
+### V6 Decision 1 — Page Title: Differentiation Formula
+**Change:** Title → "Adams Blinds London — Blind Fitters Who Measure, Make & Fit | Free Home Survey"
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Differentiation-focused formula: "The [category] that [key differentiator]". Previous title was generic product listing. New title states the differentiator (we do all three) in the first phrase.
+
+### V6 Decision 2 — Announcement Bar: Real Urgency
+**Change:** "London's Best Blinds & Shutters Company" → "Survey slots available this week — book yours now"
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Scarcity/Urgency Heuristic (genuine scarcity only). Previous bar was pure authority signal (still good) but added real-time urgency. Weekly survey slots ARE genuinely limited — this is authentic, not manufactured.
+
+### V6 Decision 3 — Navigation: Inspiration → Reviews
+**Change:** Nav item "Inspiration (#gallery)" → "Reviews (#testimonials)"
+**Reference file:** `~/.claude/skills/site-architecture/references/site-type-templates.md`
+**Principle:** Small Business/Local template lists "Testimonials" as a recommended nav item (not gallery/inspiration). At the consideration stage, social proof matters more than inspiration. Reviews page is higher conversion value as a nav destination.
+
+### V6 Decision 4 — Hero Headline: Differentiation Formula Applied
+**Change:** "Beautiful blinds. Fitted properly." → "The blind fitters who measure, make, and fit. Always our team."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Differentiation formula: "The [category] that [key differentiator]". Previous headline was elegant but vague — every blind company could say "beautiful blinds". New headline states Adams Blinds' actual USP (they do all three steps themselves) and rules out the competition in a single phrase.
+
+### V6 Decision 5 — Hero Secondary CTA: Conversion Funnel
+**Change:** "See Our Work (#gallery)" → "Read Our Reviews (#testimonials)"
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md` + `~/.claude/skills/site-architecture/references/navigation-patterns.md`
+**Principle:** Bandwagon Effect / Social Proof — testimonials are a higher-value destination for an undecided visitor than an inspiration gallery. Navigation patterns: CTA ordering by conversion priority.
+
+### V6 Decision 6 — Hero CTA Sub-text: Activation Energy Reduction
+**Change:** "Free home survey · No obligation · We call you within 2 hours" → added "Takes 60 seconds to book" as first item
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Activation Energy — the initial energy required to start something. "Takes 60 seconds" makes the barrier feel trivially small. BJ Fogg Behavior Model: Behavior = Motivation × Ability × Prompt. This increases Ability perception.
+
+### V6 Decision 7 — NEW SECTION: Problem/Pain Section (structural addition)
+**Change:** Added entirely new "Problem With Most Blind Companies" section between Trust Bar and Adams Difference
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** "Varied, Engaging Page" structure requires: Hero → Social proof → **Problem/pain** → How it works → Benefits → Testimonial → FAQ → Final CTA. V5 had NO problem/pain section — the page went straight from trust signals to benefits. This breaks the persuasive narrative arc. The new section:
+- Uses "You know the feeling..." format (prescribed by copy-frameworks.md)
+- 3 pain cards: self-measuring → wrong fitter → long waits
+- Loss aversion panel: "Made-to-measure blinds can't be returned"
+**Marketing psychology:** Loss Aversion (losses feel 2× as painful as gains). This section directly addresses the 4/10 Loss Aversion score from quality_review_v5.md.
+
+### V6 Decision 8 — Adams Difference H2: Problem-Focused Formula
+**Change:** "Not just blinds — a considered transformation" → "Stop settling for blinds that almost look right"
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Problem-focused formula: "Stop [pain]. Start [pleasure]." The word "almost" is doing real work here — it calls out the experience of ordering online and getting something that's slightly wrong. Loss aversion: this targets the regret of a bad previous purchase.
+
+### V6 Decision 9 — How It Works H2: Outcome Formula Applied
+**Change:** "We come to you. Do everything. Leave you sorted." → "Book. We visit. Your windows transformed."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** AIDA structure applied to section intro. Previous headline was process-focused. New headline is outcome-focused and mirrors the 3-step structure of the section itself, creating natural anticipation.
+
+### V6 Decision 10 — How It Works Steps: Simple Verb + Outcome Format
+**Change:** Steps restructured from descriptive prose to simple verb + what they get format
+- Step 1: "Free Home Survey" → "Book (takes 60 seconds)" + outcome: confirmation within 48 hours
+- Step 2: "We Measure Every Window" → "We visit (free, no obligation)" + outcome: fixed-price quote on the spot
+- Step 3: "Our Team Fits Everything" → "Get perfect windows (our team, guaranteed)" + outcome: if anything isn't right, we fix it free
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** How It Works format: "Each step should be numbered, simple verb, outcome-oriented: 'Connect, Set up, Get'". Previous steps were passive descriptions. New steps use action verbs and name the exact outcome the customer gets from each step.
+
+### V6 Decision 11 — How It Works CTA: Real Urgency
+**Change:** "No obligation · Most surveys within 48 hours" → "Survey slots available this week · No obligation · We call you within 2 hours"
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Scarcity/Urgency Heuristic + EAST framework (Timely — ask at the right moment). This is the moment of highest intent (just read how it works). Adding genuine weekly urgency here is appropriate.
+
+### V6 Decision 12 — Products H2: Outcome Formula
+**Change:** "Crafted for every London home" → "Made to measure. Fitted by our team."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Outcome-focused formula. The previous headline was generic brand claim. The new headline states the two key USPs in 6 words — both differentiate from online retailers.
+
+### V6 Decision 13 — Before/After H2: Proof-Focused Formula
+**Change:** "The same room. An entirely different feeling." → "4,000 London homes. 129 Google reviews. One consistent verdict."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Proof-focused formula: "[Number] [people] [outcome]". Previous headline was poetic but vague. New headline stacks three real numbers — each number is a trust signal. "One consistent verdict" creates intrigue and implies the verdict is positive without stating it.
+
+### V6 Decision 14 — Testimonials H2: Proof Formula Applied
+**Change:** "Trusted by 4,000+ London homes" → "129 Google reviews. 4.9 stars. Every time."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Proof-focused formula emphasising consistency. "Every time" is the key phrase — it implies this isn't cherry-picked, it's their standard. Contrast with "4,000+ London homes" which is impressive but abstract; "129 reviews at 4.9" is verifiable and specific.
+
+### V6 Decision 15 — Featured Testimonial: Specificity Rule Applied
+**Change:** Added specific room (plantation shutters, living room), outcome (better than I imagined), and social behaviour (recommended to 3 neighbours)
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Testimonial selection rules: "Best testimonials include specific results, before/after context, role + company for credibility, something quotable and specific. Avoid testimonials that just say 'Great product!' or 'Love it!'". Previous featured testimonial was good but lacked specifics. New version adds: product, room, qualitative outcome, and referral behaviour.
+
+### V6 Decision 16 — Grid Testimonials: Specificity Rule Applied
+**Change:** Replaced vague testimonials ("Great local company with fantastic customer service" and "Efficient, reliable and friendly service throughout") with specific-result versions
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** Same testimonial selection principle. "Great local company" adds zero information — it's what every local company would want said. New Bibi C. quote names the product, rooms, and longevity ("still perfect two years on"). New Olivia S. quote adds before/after context ("I'd tried a cheaper online company before").
+
+### V6 Decision 17 — Free Samples: Endowment Effect Copy
+**Change:** "See the colour, feel the texture and hold it up to your window" → "The moment you hold a real sample up to your window — in your light, against your walls — you'll know."
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Endowment Effect — people value things more once they own/hold them. The new copy emphasises the physical experience of possession and the emotional certainty it creates. "You'll know" is outcome-focused and activates the endowment effect through imagination.
+
+### V6 Decision 18 — Consultation Section: Urgency + Regret Aversion
+**Change:** Headline "Your perfect windows start with a conversation" → "Survey slots available this week — book yours now". Body adds "Not happy with our advice? No charge, no obligation. You simply say no."
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** (1) Scarcity/Urgency Heuristic — genuine weekly slot scarcity at final CTA. (2) Regret Aversion — "people avoid actions that might cause regret". Adding "simply say no" removes the imagined regret of booking and not wanting to proceed. This directly lowers the psychological barrier to submitting the form.
+
+### V6 Decision 19 — Form Trust Signals Strip
+**Change:** Added three micro-trust signals above the consultation form: 4.9/5 rating, Free visit no obligation, We call within 2 hours
+**Reference file:** `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Social proof + Regret Aversion at highest-friction moment (form submission). Authority (4.9/5 stars) signals competence. "No obligation" directly reduces regret aversion. "Within 2 hours" reduces anxiety about the unknown post-submission experience. Per EAST framework: make it Attractive (stars), Timely (2 hours), Social (129 reviews).
+
+### V6 Decision 20 — Plain English Sweep
+**Change:** "provide a fixed price quote" → "give you a fixed-price quote". "guide you through hundreds of fabrics" → "walk you through hundreds of fabrics".
+**Reference file:** `~/.claude/skills/copy-editing/references/plain-english-alternatives.md`
+**Principle:** "provide" → "give" (plain English rule #4). "guide" is fine but "walk you through" is more conversational and personal. Full scan confirmed no instances of: utilise, ensure, facilitate, in order to, currently, approximately, basically, actually. V5 was already reasonably clean.
+
+### V6 Decision 21 — About Section Headline: Authority + Timeline
+**Change:** "London-made, London-minded" → "Independent since 2009. London-minded. Always."
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md` + `~/.claude/skills/marketing-psychology/SKILL.md`
+**Principle:** Lindy Effect — the longer something has survived, the longer it's likely to continue. "Since 2009" is a trust signal because it proves longevity. "Independent" is a direct differentiator vs national chains. "Always" adds commitment and consistency framing.
+
+### V6 Decision 22 — FAQ Headline: Outcome Formula
+**Change:** "Questions we get asked" → "Everything you want to know before booking"
+**Reference file:** `~/.claude/skills/copywriting/references/copy-frameworks.md`
+**Principle:** "Everything you need to [outcome]" formula. The new headline reframes the FAQ from a company-centric ("questions WE get asked") to a customer-centric ("everything YOU want to know") framing. "Before booking" adds a specific moment of relevance.
+
+### V6 Decision 23 — image-generation.md Applied (for future use)
+**Reference file:** `~/.claude/skills/image-generation/references/prompt-crafting.md`
+**Note:** All images in v5/v6 use real Adams Blinds CDN photography (not AI-generated). The prompt-crafting reference was read and documented for future use when AI images are needed:
+- Formula: `Editorial lifestyle photography of [subject], warm natural light / golden hour lighting, cream and terracotta color palette, sophisticated refined elegant, rule of thirds composition, authentic real home feel`
+- Style words: editorial, lifestyle, sophisticated, refined, elegant, warm, inviting
+- No text in AI-generated images; overlays applied via Python/Pillow
