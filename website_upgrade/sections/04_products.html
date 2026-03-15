@@ -1,0 +1,421 @@
+<!-- ============================================================
+     SECTION: Products Bento Grid
+     id: products
+     Background: cream
+     ============================================================ -->
+<section id="products" class="bg-cream section-pad">
+  <div class="container">
+
+    <!-- Section header -->
+    <div class="products__header reveal" style="margin-bottom:3rem;">
+      <p class="overline">Our collections</p>
+      <h2 class="section-headline" style="margin-top:0.75rem;">
+        Crafted for every <em>London home</em>
+      </h2>
+      <p class="body-lg" style="margin-top:1rem;max-width:600px;">
+        From Victorian sash windows in Islington to Canary Wharf apartments &mdash; we make and fit every type of window treatment to your exact dimensions.
+      </p>
+    </div>
+
+    <!-- Bento grid: 3-col asymmetric desktop, 1-col mobile -->
+    <div class="products__bento" style="
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 1.5rem;
+    ">
+
+      <!-- ========================
+           CARD 1: PLANTATION SHUTTERS — Large, spans 2 rows
+           ======================== -->
+      <article class="products__card products__card--large reveal reveal-left" style="
+        grid-row: span 2;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        min-height: 520px;
+        background-color: #363330;
+        box-shadow: 0 12px 40px rgba(54,51,48,0.14);
+      ">
+        <!-- Full-height image -->
+        <img
+          src="https://www.adamsblinds.co.uk/london/z-images/img-general/plantation-shutters.jpg"
+          alt="Plantation shutters installed in a London home"
+          loading="lazy"
+          style="
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+          "
+          onerror="this.style.display='none'"
+        >
+
+        <!-- Semi-transparent overlay — bottom third -->
+        <div aria-hidden="true" style="
+          position: absolute;
+          inset: 0;
+          background: linear-gradient(
+            to bottom,
+            transparent 30%,
+            rgba(54,51,48,0.45) 58%,
+            rgba(54,51,48,0.88) 100%
+          );
+          pointer-events: none;
+        "></div>
+
+        <!-- Content overlay at bottom -->
+        <div style="
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 2rem 1.75rem 1.75rem;
+          z-index: 2;
+        ">
+          <!-- Badge -->
+          <span style="
+            display: inline-block;
+            background: #C2704F;
+            color: #FAF8F5;
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            margin-bottom: 0.75rem;
+          ">Most popular</span>
+
+          <h3 class="card-headline text-cream" style="
+            font-family: 'Playfair Display', Georgia, serif;
+            color: #FAF8F5;
+            margin-bottom: 0.6rem;
+          ">Plantation Shutters</h3>
+
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: rgba(250,248,245,0.82);
+            margin-bottom: 1.25rem;
+            max-width: 380px;
+          ">
+            Full-height caf&eacute; and tier-on-tier options. Solid hardwood or ABS polymer. Lifetime guarantee on the frame.
+          </p>
+
+          <a href="#contact" style="
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4em;
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            color: #FAF8F5;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            border-bottom: 1.5px solid rgba(250,248,245,0.4);
+            padding-bottom: 0.1em;
+            transition: border-color 0.2s, color 0.2s;
+          " onmouseover="this.style.borderColor='#FAF8F5'" onmouseout="this.style.borderColor='rgba(250,248,245,0.4)'">
+            View shutters
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M2.5 7H11.5M8 3.5L11.5 7L8 10.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- ========================
+           CARD 2: ROLLER BLINDS
+           ======================== -->
+      <article class="products__card reveal delay-1" style="
+        background: #FAF8F5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(54,51,48,0.08);
+        display: flex;
+        flex-direction: column;
+      ">
+        <div style="height:200px;overflow:hidden;background-color:#F0EDE8;flex-shrink:0;">
+          <img
+            src="https://www.adamsblinds.co.uk/london/z-images/img-general/roller-banner.jpg"
+            alt="Roller blinds in a London living room"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div style="padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <h3 style="
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #363330;
+            line-height: 1.2;
+          ">Roller Blinds</h3>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #5A5450;
+            flex: 1;
+          ">Blackout, dim-out, or sunscreen. Hundreds of fabrics including VALE and Louvolite collections.</p>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #B8956A;
+            margin-top: 0.4rem;
+            letter-spacing: 0.04em;
+          ">Free fitting included</p>
+        </div>
+      </article>
+
+      <!-- ========================
+           CARD 3: ROMAN BLINDS
+           ======================== -->
+      <article class="products__card reveal delay-2" style="
+        background: #FAF8F5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(54,51,48,0.08);
+        display: flex;
+        flex-direction: column;
+      ">
+        <div style="height:200px;overflow:hidden;background-color:#F0EDE8;flex-shrink:0;">
+          <img
+            src="https://www.adamsblinds.co.uk/london/z-images/img-general/roman-blind.jpg"
+            alt="Roman blinds in a London bedroom"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div style="padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <h3 style="
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #363330;
+            line-height: 1.2;
+          ">Roman Blinds</h3>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #5A5450;
+            flex: 1;
+          ">Soft fabric folds. Perfect for living rooms and bedrooms where you want warmth and texture.</p>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #B8956A;
+            margin-top: 0.4rem;
+            letter-spacing: 0.04em;
+          ">Free fitting included</p>
+        </div>
+      </article>
+
+      <!-- ========================
+           CARD 4: VENETIAN BLINDS
+           ======================== -->
+      <article class="products__card reveal delay-2" style="
+        background: #FAF8F5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(54,51,48,0.08);
+        display: flex;
+        flex-direction: column;
+      ">
+        <div style="height:200px;overflow:hidden;background-color:#F0EDE8;flex-shrink:0;">
+          <img
+            src="https://www.adamsblinds.co.uk/london/z-images/img-general/venetian-blind.jpg"
+            alt="Venetian blinds in a London kitchen"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div style="padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <h3 style="
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #363330;
+            line-height: 1.2;
+          ">Venetian Blinds</h3>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #5A5450;
+            flex: 1;
+          ">Aluminium or real wood. Precise light control. Easy to clean.</p>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #B8956A;
+            margin-top: 0.4rem;
+            letter-spacing: 0.04em;
+          ">Free fitting included</p>
+        </div>
+      </article>
+
+      <!-- ========================
+           CARD 5: VERTICAL BLINDS
+           ======================== -->
+      <article class="products__card reveal delay-3" style="
+        background: #FAF8F5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(54,51,48,0.08);
+        display: flex;
+        flex-direction: column;
+      ">
+        <div style="height:200px;overflow:hidden;background-color:#F0EDE8;flex-shrink:0;">
+          <img
+            src="https://www.adamsblinds.co.uk/london/z-images/img-general/vertical-blind.jpg"
+            alt="Vertical blinds covering a large London patio door"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div style="padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <h3 style="
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #363330;
+            line-height: 1.2;
+          ">Vertical Blinds</h3>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #5A5450;
+            flex: 1;
+          ">For large windows and patio doors. Wide fabric and colour range.</p>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #B8956A;
+            margin-top: 0.4rem;
+            letter-spacing: 0.04em;
+          ">Free fitting included</p>
+        </div>
+      </article>
+
+      <!-- ========================
+           CARD 6: CURTAINS & SOFT FURNISHINGS
+           ======================== -->
+      <article class="products__card reveal delay-4" style="
+        background: #FAF8F5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 16px rgba(54,51,48,0.08);
+        display: flex;
+        flex-direction: column;
+      ">
+        <div style="height:200px;overflow:hidden;background-color:#F0EDE8;flex-shrink:0;">
+          <img
+            src="https://www.adamsblinds.co.uk/london/z-images/img-general/curtains.jpg"
+            alt="Made-to-measure curtains in a London living room"
+            loading="lazy"
+            style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"
+            onerror="this.style.display='none'"
+          >
+        </div>
+        <div style="padding:1.25rem 1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;gap:0.5rem;">
+          <h3 style="
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #363330;
+            line-height: 1.2;
+          ">Curtains &amp; Soft Furnishings</h3>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: #5A5450;
+            flex: 1;
+          ">Made-to-measure curtains, pelmets and tracks. Hundreds of fabric options.</p>
+          <p style="
+            font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #B8956A;
+            margin-top: 0.4rem;
+            letter-spacing: 0.04em;
+          ">Free fitting included</p>
+        </div>
+      </article>
+
+    </div><!-- end bento grid -->
+
+    <!-- Reassurance strip -->
+    <div class="products__reassurance reveal delay-3" style="
+      margin-top: 2.5rem;
+      background: #F0EDE8;
+      border: 1px solid #E8E3DC;
+      border-radius: 8px;
+      padding: 1.25rem 2rem;
+      text-align: center;
+    ">
+      <p style="
+        font-family: 'Raleway', 'Helvetica Neue', Helvetica, sans-serif;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #B8956A;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        line-height: 2;
+      ">
+        Every product is made to measure
+        <span aria-hidden="true" style="margin:0 0.6em;color:#D4B48A;">&middot;</span>
+        Professional fitting always included
+        <span aria-hidden="true" style="margin:0 0.6em;color:#D4B48A;">&middot;</span>
+        Surveyed by our own team
+        <span aria-hidden="true" style="margin:0 0.6em;color:#D4B48A;">&middot;</span>
+        No off-the-shelf products
+      </p>
+    </div>
+
+  </div><!-- end container -->
+</section>
+
+<!-- Responsive: bento grid collapses to single column on mobile -->
+<style>
+  @media (max-width: 900px) {
+    .products__bento {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .products__card--large {
+      grid-row: span 1 !important;
+      grid-column: span 2 !important;
+      min-height: 340px !important;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .products__bento {
+      grid-template-columns: 1fr !important;
+    }
+    .products__card--large {
+      grid-column: span 1 !important;
+      min-height: 300px !important;
+    }
+    .products__reassurance p {
+      text-align: left !important;
+    }
+  }
+</style>

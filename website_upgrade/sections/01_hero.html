@@ -1,0 +1,138 @@
+<!-- ============================================================
+   ADAMS BLINDS v6 — Section 01: Announcement Bar + Nav + Hero
+   Fragment file — no DOCTYPE/html/head/body tags
+   ============================================================ -->
+
+<!-- ANNOUNCEMENT BAR -->
+<div class="announcement-bar" id="announcement-bar" role="banner" aria-label="Site announcement">
+  <span>Free measuring &amp; fitting on every order &mdash; no hidden costs, ever</span>
+  <span class="sep" aria-hidden="true">|</span>
+  <span>Call <a href="tel:02037456525">020 3745 6525</a></span>
+  <button class="announcement-close" aria-label="Dismiss announcement" onclick="document.getElementById('announcement-bar').style.display='none'">&#215;</button>
+</div>
+
+<!-- NAVIGATION -->
+<div class="nav-wrapper" id="nav-wrapper">
+  <div class="container">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="/" class="nav-logo" aria-label="Adams Blinds London — home">
+        <img
+          src="https://www.adamsblinds.co.uk/london/z-images/img-site/blinds-london.webp"
+          alt="Adams Blinds London"
+          width="160"
+          height="44"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="nav-links" role="list">
+        <li><a href="#products">Products</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <!-- Right side: CTA + hamburger -->
+      <div class="nav-right">
+        <a href="tel:02037456525" class="btn btn-primary nav-cta" aria-label="Call us on 020 3745 6525">
+          Book Free Survey
+        </a>
+        <button
+          class="nav-hamburger"
+          aria-label="Open mobile navigation"
+          aria-expanded="false"
+          aria-controls="nav-mobile"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </nav>
+  </div>
+</div>
+
+<!-- MOBILE NAVIGATION DRAWER -->
+<div class="nav-mobile" id="nav-mobile" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+  <a href="#products" tabindex="-1">Products</a>
+  <a href="#how-it-works" tabindex="-1">How It Works</a>
+  <a href="#reviews" tabindex="-1">Reviews</a>
+  <a href="#inspiration" tabindex="-1">Inspiration</a>
+  <a href="#contact" tabindex="-1">Contact</a>
+  <a href="tel:02037456525" class="btn btn-primary" tabindex="-1">Book Free Survey &mdash; 020 3745 6525</a>
+</div>
+<div class="nav-drawer-overlay" aria-hidden="true"></div>
+
+<!-- MAIN CONTENT START -->
+<main id="main-content">
+
+  <!-- HERO SECTION -->
+  <section class="hero" aria-label="Welcome to Adams Blinds London">
+
+    <!-- Left column: copy (55fr) -->
+    <div class="hero-content">
+
+      <p class="overline hero-label">London&rsquo;s Independent Blind Specialists</p>
+
+      <h1 class="hero-headline display-headline">
+        Your windows deserve<br>
+        <em>better than whatever fits.</em>
+      </h1>
+
+      <p class="hero-sub">
+        Most London homes make do with off-the-shelf blinds that are slightly too wide, slightly too short, and never quite right. It doesn&rsquo;t have to be that way. Adams Blinds visits you at home, guides every choice, and fits everything perfectly &mdash; all included, no surprises.
+      </p>
+
+      <div class="hero-ctas">
+        <a href="tel:02037456525" class="btn btn-primary btn-lg btn-arrow">
+          Book Your Free Home Survey
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="#how-it-works" class="btn btn-ghost">
+          See how it works
+        </a>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="hero-trust-strip" aria-label="Trust indicators">
+        <span class="stars" aria-label="4.9 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><strong>4.9</strong> Google</span>
+        <span aria-hidden="true">&nbsp;&middot;&nbsp;129 reviews</span>
+        <span class="trust-sep" aria-hidden="true">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>BUILD Award 2021</span>
+        <span class="trust-sep" aria-hidden="true">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span>Free fitting included</span>
+      </div>
+
+    </div>
+
+    <!-- Right column: image (45fr) -->
+    <div class="hero-image">
+      <img
+        src="https://www.adamsblinds.co.uk/london/z-images/img-general/roller-banner.jpg"
+        alt="Perfectly fitted roller blinds in a London home by Adams Blinds"
+        width="900"
+        height="1100"
+        loading="eager"
+        fetchpriority="high"
+      />
+
+      <!-- Floating badge -->
+      <div class="hero-badge" role="complementary" aria-label="Customer rating">
+        <div class="badge-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="badge-count">
+          <span data-target="129" data-suffix="+">129</span> happy customers
+        </div>
+        <div class="badge-text">4.9 Google Rating</div>
+      </div>
+    </div>
+
+  </section>
+  <!-- End hero section -->
