@@ -2411,6 +2411,9 @@ em {
 </head>
 <body>
 
+<!-- Skip link for accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- === 01_hero.html === -->
 <!-- ============================================================
    ADAMS BLINDS v6 — Section 01: Announcement Bar + Nav + Hero
@@ -2486,7 +2489,7 @@ em {
 <main id="main-content">
 
   <!-- HERO SECTION -->
-  <section class="hero" aria-label="Welcome to Adams Blinds London">
+  <section class="hero" id="hero" aria-label="Welcome to Adams Blinds London">
 
     <!-- Left column: copy (55fr) -->
     <div class="hero-content">
@@ -3729,6 +3732,7 @@ em {
    ============================================================ -->
 
 <!-- FREE SAMPLES SECTION -->
+<span id="inspiration" style="display:block;height:0;visibility:hidden;" aria-hidden="true"></span>
 <section id="samples" aria-label="Order free samples" style="background-color:#C2704F; color:#FAF8F5; padding:6rem 0;">
   <div class="container">
     <div class="samples-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
