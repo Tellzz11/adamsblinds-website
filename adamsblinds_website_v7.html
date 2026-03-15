@@ -113,11 +113,9 @@ h1,h2,h3,h4,h5{font-family:"Playfair Display",serif;line-height:1.2;color:var(--
 .hero-trust-strip span{display:flex;align-items:center;gap:6px}
 .hero-trust-strip .sep{color:var(--light-grey)}
 .stars{color:var(--gold);font-size:.9rem;letter-spacing:-1px}
-.hero-visual{flex:0 0 45%;position:relative;overflow:hidden;background:url("website_upgrade/images/venetian-blind.jpg") center/cover no-repeat;min-height:400px;}
-.hero-visual img{display:none;}
-.shutter-wrap{position:absolute;inset:0;perspective:1200px;z-index:4;pointer-events:none;}
-.shutter-slat{position:absolute;left:-2px;right:-2px;background:linear-gradient(180deg,var(--cream) 0%,var(--linen) 50%,var(--cream) 100%);transform-origin:center center;transform:rotateX(0deg);transition:transform .6s cubic-bezier(.4,0,.2,1);will-change:transform;border-top:1px solid rgba(184,149,106,.2)}
-.shutter-slat.open{transform:rotateX(85deg)}
+.hero-visual{flex:0 0 45%;position:relative;overflow:hidden;background:url("website_upgrade/shutter_open.png") center/cover no-repeat;min-height:400px;}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;transition:opacity .5s ease}
+.hero-video.fade-out{opacity:0;pointer-events:none}
 .hero-trust-badge{position:absolute;bottom:24px;right:24px;z-index:6;position:absolute;bottom:32px;right:32px;background:rgba(54,51,48,.85);backdrop-filter:blur(8px);color:var(--white);padding:16px 20px;border-radius:var(--radius-md);text-align:center;font-size:.75rem;line-height:1.4;z-index:5;min-width:140px;border:1px solid rgba(255,255,255,.1)}
 .hero-trust-badge strong{font-size:1.25rem;display:block;color:var(--gold);font-family:"Playfair Display",serif}
 /* Trust bar */
@@ -489,8 +487,10 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
     </div>
   </div>
   <div class="hero-visual" aria-hidden="true">
-    <img src="website_upgrade/images/venetian-blind.jpg" alt="Venetian blind fitted in a London home" loading="eager">
-    <div class="shutter-wrap" id="shutterWrap"></div>
+    <video id="heroVideo" class="hero-video" muted playsinline preload="auto"
+      poster="website_upgrade/shutter_closed.png">
+      <source src="website_upgrade/shutter_animation_min.mp4" type="video/mp4">
+    </video>
     <div class="hero-trust-badge">
       <strong>4.9&#9733;</strong>
       129 Google<br>reviews
@@ -766,7 +766,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
     <div class="bento-grid">
       <!-- Large card: plantation shutters -->
       <div class="bento-card bento-card-large reveal-left">
-        <img src="website_upgrade/images/plantation-shutters.jpg" alt="Plantation shutters fitted in a London home" loading="lazy">
+        <img src="website_upgrade/images/ai-shutters.png" alt="Plantation shutters fitted in a London home" loading="lazy">
         <div class="bento-overlay"></div>
         <div class="bento-label">
           <span class="bento-tag">Most popular</span>
@@ -776,7 +776,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       </div>
       <!-- Small cards -->
       <div class="bento-card bento-card-sm reveal">
-        <img src="website_upgrade/images/roller-banner.jpg" alt="Roller blinds in a contemporary London flat" loading="lazy">
+        <img src="website_upgrade/images/ai-roller.png" alt="Roller blinds in a contemporary London flat" loading="lazy">
         <div class="bento-overlay"></div>
         <div class="bento-label">
           <span class="bento-tag">Versatile</span>
@@ -785,7 +785,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
         </div>
       </div>
       <div class="bento-card bento-card-sm reveal">
-        <img src="website_upgrade/images/roman-blind.jpg" alt="Roman blinds adding soft elegance to a London room" loading="lazy">
+        <img src="website_upgrade/images/ai-roman.png" alt="Roman blinds adding soft elegance to a London room" loading="lazy">
         <div class="bento-overlay"></div>
         <div class="bento-label">
           <span class="bento-tag">Classic</span>
@@ -794,7 +794,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
         </div>
       </div>
       <div class="bento-card bento-card-sm reveal">
-        <img src="website_upgrade/images/venetian-blind.jpg" alt="Venetian blinds providing precise light control" loading="lazy">
+        <img src="website_upgrade/images/ai-venetian.png" alt="Venetian blinds providing precise light control" loading="lazy">
         <div class="bento-overlay"></div>
         <div class="bento-label">
           <span class="bento-tag">Precision light control</span>
@@ -803,7 +803,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
         </div>
       </div>
       <div class="bento-card bento-card-sm reveal">
-        <img src="website_upgrade/images/vertical-blind.jpg" alt="Vertical blinds for large windows and patio doors" loading="lazy">
+        <img src="website_upgrade/images/ai-vertical.png" alt="Vertical blinds for large windows and patio doors" loading="lazy">
         <div class="bento-overlay"></div>
         <div class="bento-label">
           <span class="bento-tag">Large windows</span>
@@ -837,7 +837,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <!-- Plantation Shutters -->
       <div class="shop-card" data-category="shutters">
         <div class="shop-card-img">
-          <img src="website_upgrade/images/plantation-shutters.jpg" alt="Plantation shutters" loading="lazy">
+          <img src="website_upgrade/images/ai-shutters.png" alt="Plantation shutters" loading="lazy">
         </div>
         <div class="shop-card-body">
           <p class="shop-card-category">Shutters</p>
@@ -847,7 +847,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
             data-name="Plantation Shutters"
             data-category="Shutters"
             data-price="From &pound;650"
-            data-img="website_upgrade/images/plantation-shutters.jpg"
+            data-img="website_upgrade/images/ai-shutters.png"
             data-desc="Timeless full-height plantation shutters crafted from premium hardwood. Provide excellent insulation, light control, and privacy. Available in a wide range of paints and stains to complement any London interior. Each panel is made precisely to your window dimensions."
             data-swatches="#F5F0E8,#E8DED0,#D4C4A8,#C8B89A,#A89070,#6B5A44,#4A3728,#2C1F14">
             View options
@@ -857,7 +857,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <!-- Roller Blinds -->
       <div class="shop-card" data-category="blinds">
         <div class="shop-card-img">
-          <img src="website_upgrade/images/roller-banner.jpg" alt="Roller blinds" loading="lazy">
+          <img src="website_upgrade/images/ai-roller.png" alt="Roller blinds" loading="lazy">
         </div>
         <div class="shop-card-body">
           <p class="shop-card-category">Blinds</p>
@@ -867,7 +867,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
             data-name="Roller Blinds"
             data-category="Blinds"
             data-price="From &pound;89"
-            data-img="website_upgrade/images/roller-banner.jpg"
+            data-img="website_upgrade/images/ai-roller.png"
             data-desc="Clean, minimal, and incredibly practical. Our roller blinds are made to your exact window width and drop, available in blackout, dim-out, and light-filtering fabrics. Perfect for bedrooms, kitchens, and home offices across London."
             data-swatches="#FFFFFF,#F5F5F0,#E8E4DC,#D4D0C8,#B8B4AC,#8C8880,#6B6560,#363330">
             View options
@@ -877,7 +877,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <!-- Roman Blinds -->
       <div class="shop-card" data-category="blinds">
         <div class="shop-card-img">
-          <img src="website_upgrade/images/roman-blind.jpg" alt="Roman blinds" loading="lazy">
+          <img src="website_upgrade/images/ai-roman.png" alt="Roman blinds" loading="lazy">
         </div>
         <div class="shop-card-body">
           <p class="shop-card-category">Blinds</p>
@@ -887,7 +887,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
             data-name="Roman Blinds"
             data-category="Blinds"
             data-price="From &pound;149"
-            data-img="website_upgrade/images/roman-blind.jpg"
+            data-img="website_upgrade/images/ai-roman.png"
             data-desc="Elegant folded fabric blinds that bring warmth and texture to any window. Available in a curated selection of linen, cotton, and weave fabrics. Roman blinds work beautifully in living rooms, dining areas, and bay windows throughout London."
             data-swatches="#FAF8F5,#F0ECE3,#D4C4A8,#C2704F,#B8956A,#D4AF64,#6B6560,#363330">
             View options
@@ -897,7 +897,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <!-- Venetian Blinds -->
       <div class="shop-card" data-category="blinds">
         <div class="shop-card-img">
-          <img src="website_upgrade/images/venetian-blind.jpg" alt="Venetian blinds" loading="lazy">
+          <img src="website_upgrade/images/ai-venetian.png" alt="Venetian blinds" loading="lazy">
         </div>
         <div class="shop-card-body">
           <p class="shop-card-category">Blinds</p>
@@ -907,7 +907,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
             data-name="Venetian Blinds"
             data-category="Blinds"
             data-price="From &pound;129"
-            data-img="website_upgrade/images/venetian-blind.jpg"
+            data-img="website_upgrade/images/ai-venetian.png"
             data-desc="Aluminium or real wood slats for precise light and privacy control. Tilt the slats to direct light exactly where you want it. Available in a wide range of slat widths and finishes. Especially popular in London studies, home offices, and living rooms."
             data-swatches="#FFFFFF,#FAF8F5,#D4C4A8,#C8B89A,#8C8880,#6B5A44,#363330,#2C2C2A">
             View options
@@ -917,7 +917,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <!-- Vertical Blinds -->
       <div class="shop-card" data-category="blinds">
         <div class="shop-card-img">
-          <img src="website_upgrade/images/vertical-blind.jpg" alt="Vertical blinds" loading="lazy">
+          <img src="website_upgrade/images/ai-vertical.png" alt="Vertical blinds" loading="lazy">
         </div>
         <div class="shop-card-body">
           <p class="shop-card-category">Blinds</p>
@@ -927,7 +927,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
             data-name="Vertical Blinds"
             data-category="Blinds"
             data-price="From &pound;99"
-            data-img="website_upgrade/images/vertical-blind.jpg"
+            data-img="website_upgrade/images/ai-vertical.png"
             data-desc="The ideal choice for large windows, patio doors, and sliding doors. Vertical blinds offer easy operation and full light control. Made to measure for your exact opening size, with a wide selection of fabric and voile options."
             data-swatches="#FFFFFF,#F5F5F0,#E8E4DC,#D4D0C8,#C8C4BC,#A8A4A0,#8C8880,#6B6560">
             View options
@@ -975,8 +975,8 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
       <p class="modal-desc" id="modalDesc"></p>
       <p class="modal-swatches-label">Colour options</p>
       <div class="modal-swatches" id="modalSwatches"></div>
-      <button class="modal-add-btn" id="modalAddBtn">Add to enquiry</button>
-      <a href="#contact" class="modal-survey-btn" id="modalSurveyBtn">Book a free home survey</a>
+      <button class="modal-add-btn" id="modalAddBtn">Request a quote</button>
+      <a href="#contact" class="modal-survey-btn" id="modalSurveyBtn" onclick="document.getElementById('productModal').classList.remove('open');document.body.style.overflow=''">Book a free home survey &rarr;</a>
     </div>
   </div>
 </div>
@@ -1388,45 +1388,38 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
     }
   });
 
-  // ── SHUTTER ANIMATION ──
-  var shutterWrap = document.getElementById('shutterWrap');
-  var shutterTriggered = false;
+  // ── HERO SHUTTER VIDEO ANIMATION (ported from v4) ──
+  var heroVideo = document.getElementById('heroVideo');
+  if (heroVideo) {
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (prefersReducedMotion.matches) {
+      // Skip animation — show open state immediately
+      heroVideo.style.display = 'none';
+    } else {
+      var heroVideoTriggered = false;
 
-  function buildSlats() {
-    if (!shutterWrap) return;
-    var numSlats = 18;
-    var slatHeight = 100 / numSlats;
-    shutterWrap.innerHTML = '';
-    for (var i = 0; i < numSlats; i++) {
-      var slat = document.createElement('div');
-      slat.className = 'shutter-slat';
-      slat.style.top = (i * slatHeight) + '%';
-      slat.style.height = (slatHeight + 0.1) + '%';
-      slat.style.transitionDelay = (i * 0.045) + 's';
-      shutterWrap.appendChild(slat);
+      function playHeroVideo() {
+        if (heroVideoTriggered) return;
+        heroVideoTriggered = true;
+        heroVideo.play().catch(function() {});
+      }
+
+      // Fade out video after it ends, revealing the shutter_open.png background
+      heroVideo.addEventListener('ended', function() {
+        heroVideo.classList.add('fade-out');
+      });
+
+      // Trigger on first scroll (same pattern as v4's scroll-start)
+      var heroScrollTimeout = setTimeout(playHeroVideo, 2000);
+      window.addEventListener('scroll', function heroScrollTrigger() {
+        if (window.scrollY > 20) {
+          clearTimeout(heroScrollTimeout);
+          playHeroVideo();
+          window.removeEventListener('scroll', heroScrollTrigger);
+        }
+      }, { passive: true });
     }
   }
-
-  function openShutters() {
-    if (shutterTriggered) return;
-    shutterTriggered = true;
-    var slats = shutterWrap ? shutterWrap.querySelectorAll('.shutter-slat') : [];
-    slats.forEach(function(slat) {
-      slat.classList.add('open');
-    });
-  }
-
-  buildSlats();
-
-  // Trigger on first scroll or after 2200ms, whichever comes first
-  var shutterTimeout = setTimeout(openShutters, 2200);
-
-  function shutterScrollHandler() {
-    clearTimeout(shutterTimeout);
-    openShutters();
-    window.removeEventListener('scroll', shutterScrollHandler);
-  }
-  window.addEventListener('scroll', shutterScrollHandler, { passive: true, once: true });
 
   // ── IntersectionObserver for reveal animations ──
   var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
@@ -1502,7 +1495,8 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
     var category = btn.getAttribute('data-category') || '';
     var price = btn.getAttribute('data-price') || '';
     var desc = btn.getAttribute('data-desc') || '';
-    var swatchColors = (btn.getAttribute('data-swatches') || '').split(',');
+    // Only show first 3 representative swatches
+    var swatchColors = (btn.getAttribute('data-swatches') || '').split(',').slice(0, 3);
 
     if (modalImg) { modalImg.src = img; modalImg.alt = name; }
     if (modalCategory) modalCategory.textContent = category;
@@ -1517,8 +1511,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
         s.className = 'swatch';
         s.style.background = color.trim();
         s.setAttribute('title', color.trim());
-        s.setAttribute('role', 'button');
-        s.setAttribute('tabindex', '0');
+        s.setAttribute('role', 'presentation');
         modalSwatches.appendChild(s);
       });
     }
@@ -1559,7 +1552,7 @@ footer{background:var(--near-black);color:rgba(255,255,255,.7);padding:72px 0 0}
 
   if (modalAddBtn) {
     modalAddBtn.addEventListener('click', function() {
-      showToast('Coming soon — book a free survey to get your quote');
+      showToast('Quote request noted — we\u2019ll be in touch within 24 hours');
     });
   }
 
