@@ -2545,7 +2545,7 @@ em {
       <div class="hero-badge" role="complementary" aria-label="Customer rating">
         <div class="badge-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <div class="badge-count">
-          <span data-target="129" data-suffix="+">129</span> happy customers
+          <span data-target="129" data-suffix="+">129</span> five-star reviews
         </div>
         <div class="badge-text">4.9 Google Rating</div>
       </div>
@@ -2638,7 +2638,7 @@ em {
     <div class="problem-header reveal">
       <p class="overline" style="color: var(--brass);">Sound familiar?</p>
       <h2 class="section-headline" id="pain-heading" style="color: var(--cream); margin-top: 0.75rem; margin-bottom: 1.25rem;">
-        Every room deserves better<br>
+        Still making do with blinds<br>
         <em style="color: var(--terracotta);">than whatever fitted.</em>
       </h2>
       <p class="body-lg" style="color: rgba(250,248,245,0.7); margin-top: 0.75rem;">
@@ -4579,7 +4579,7 @@ em {
   'use strict';
 
   /* ─── Announcement Bar ─────────────────────────────────────────── */
-  const announcementDismiss = document.querySelector('.announcement-dismiss');
+  const announcementDismiss = document.querySelector('.announcement-close');
   if (announcementDismiss) {
     announcementDismiss.addEventListener('click', function () {
       const bar = document.querySelector('.announcement-bar');
@@ -4597,7 +4597,7 @@ em {
   }
 
   /* ─── Sticky Nav ────────────────────────────────────────────────── */
-  const nav = document.querySelector('.nav');
+  const nav = document.querySelector('.nav-wrapper');
   if (nav) {
     let lastScroll = 0;
     window.addEventListener('scroll', function () {
@@ -4613,7 +4613,7 @@ em {
 
   /* ─── Mobile Nav ────────────────────────────────────────────────── */
   const hamburger = document.querySelector('.nav-hamburger');
-  const drawer = document.querySelector('.nav-drawer');
+  const drawer = document.querySelector('.nav-mobile');
   const drawerClose = document.querySelector('.nav-drawer-close');
   const drawerOverlay = document.querySelector('.nav-drawer-overlay');
 
@@ -4638,7 +4638,7 @@ em {
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
   // Close drawer on nav link click
-  document.querySelectorAll('.nav-drawer a').forEach(function (link) {
+  document.querySelectorAll('.nav-mobile a').forEach(function (link) {
     link.addEventListener('click', closeDrawer);
   });
 
@@ -4697,7 +4697,7 @@ em {
 
   /* ─── Active Nav Link (scroll spy) ─────────────────────────────── */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .nav-drawer a[href^="#"]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"], .nav-mobile a[href^="#"]');
 
   if (sections.length && navLinks.length && 'IntersectionObserver' in window) {
     const spyObserver = new IntersectionObserver(function (entries) {

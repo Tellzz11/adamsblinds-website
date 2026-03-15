@@ -4,7 +4,7 @@
   'use strict';
 
   /* ─── Announcement Bar ─────────────────────────────────────────── */
-  const announcementDismiss = document.querySelector('.announcement-dismiss');
+  const announcementDismiss = document.querySelector('.announcement-close');
   if (announcementDismiss) {
     announcementDismiss.addEventListener('click', function () {
       const bar = document.querySelector('.announcement-bar');
@@ -22,7 +22,7 @@
   }
 
   /* ─── Sticky Nav ────────────────────────────────────────────────── */
-  const nav = document.querySelector('.nav');
+  const nav = document.querySelector('.nav-wrapper');
   if (nav) {
     let lastScroll = 0;
     window.addEventListener('scroll', function () {
@@ -38,7 +38,7 @@
 
   /* ─── Mobile Nav ────────────────────────────────────────────────── */
   const hamburger = document.querySelector('.nav-hamburger');
-  const drawer = document.querySelector('.nav-drawer');
+  const drawer = document.querySelector('.nav-mobile');
   const drawerClose = document.querySelector('.nav-drawer-close');
   const drawerOverlay = document.querySelector('.nav-drawer-overlay');
 
@@ -63,7 +63,7 @@
   if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawer);
 
   // Close drawer on nav link click
-  document.querySelectorAll('.nav-drawer a').forEach(function (link) {
+  document.querySelectorAll('.nav-mobile a').forEach(function (link) {
     link.addEventListener('click', closeDrawer);
   });
 
