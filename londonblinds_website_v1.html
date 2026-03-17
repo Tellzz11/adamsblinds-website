@@ -354,6 +354,18 @@
       object-fit: cover;
       object-position: center 30%;
     }
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .hero-video { display: none; }
+    }
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -1675,18 +1687,21 @@
     ============================================================ */
     .reveal,
     .reveal-left,
-    .reveal-right {
+    .reveal-right,
+    .reveal-scale {
       opacity: 0;
       transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
     }
     .reveal { transform: translateY(40px); }
     .reveal-left { transform: translateX(-50px); }
     .reveal-right { transform: translateX(50px); }
-    .reveal.vis,
-    .reveal-left.vis,
-    .reveal-right.vis {
+    .reveal-scale { transform: scale(0.95); }
+    .reveal.visible,
+    .reveal-left.visible,
+    .reveal-right.visible,
+    .reveal-scale.visible {
       opacity: 1;
-      transform: translate(0);
+      transform: translate(0) scale(1);
     }
 
     /* ============================================================
@@ -1855,7 +1870,10 @@
 
 <section id="hero">
   <div class="hero-bg">
-    <img src="images/hero-london-shutters.jpg" alt="London Victorian living room with white plantation shutters, golden morning light on herringbone oak floor" loading="eager" fetchpriority="high">
+    <video class="hero-video" autoplay muted loop playsinline poster="images/hero-london-shutters.jpg" aria-label="Plantation shutters opening to reveal golden morning light in a London Victorian living room">
+      <source src="images/shutter-animation.mp4" type="video/mp4">
+      <img src="images/hero-london-shutters.jpg" alt="London Victorian living room with white plantation shutters, golden morning light on herringbone oak floor" loading="eager" fetchpriority="high">
+    </video>
     <div class="hero-overlay"></div>
   </div>
   <!-- Shutter animation overlay -->
@@ -1943,15 +1961,15 @@
     </div>
     <div class="pain-stats reveal-right">
       <div class="stat-card">
-        <span class="stat-num" data-target="129">0</span>
+        <span class="stat-num counter" data-target="129">0</span>
         <span class="stat-label">Five-star reviews</span>
       </div>
       <div class="stat-card stat-card--accent">
-        <span class="stat-num" data-target="15">0</span>
+        <span class="stat-num counter" data-target="15">0</span>
         <span class="stat-label">Years serving London</span>
       </div>
       <div class="stat-card">
-        <span class="stat-num" data-target="100">0</span>
+        <span class="stat-num counter" data-target="100">0</span>
         <span class="stat-label">% Free fitting included</span>
       </div>
       <p class="pain-pull-quote">"The most trusted blinds specialist in London — <em>not because we say so, because 129 customers do.</em>"</p>
@@ -2638,15 +2656,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. INTERSECTION OBSERVER — REVEAL ANIMATIONS
   (function() {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
     if (reduced) {
-      els.forEach(el => el.classList.add('vis'));
+      els.forEach(el => el.classList.add('visible'));
       return;
     }
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.classList.add('vis');
+          e.target.classList.add('visible');
           obs.unobserve(e.target);
         }
       });
