@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://londonblinds.com/">
   <meta property="og:title" content="London Blinds by Adams Blinds | Expert Fitting in London">
   <meta property="og:description" content="London's trusted blind and shutter specialists. Free measuring and fitting included. 4.9★ Google rating. Serving all London boroughs.">
-  <meta property="og:image" content="https://londonblinds.com/website_upgrade/images/higgsfield/lb_hero.png">
+  <meta property="og:image" content="https://londonblinds.com/images/hero-london-shutters.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="London Blinds by Adams Blinds">
@@ -25,7 +25,7 @@
   <meta name="twitter:url" content="https://londonblinds.com/">
   <meta name="twitter:title" content="London Blinds by Adams Blinds | Expert Fitting in London">
   <meta name="twitter:description" content="London's trusted blind and shutter specialists. Free measuring and fitting included. 4.9★ Google rating.">
-  <meta name="twitter:image" content="https://londonblinds.com/website_upgrade/images/higgsfield/lb_hero.png">
+  <meta name="twitter:image" content="https://londonblinds.com/images/hero-london-shutters.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -375,14 +375,19 @@
       pointer-events: none;
     }
     .slat {
-      flex: 1;
-      background: var(--canvas);
+      position: absolute;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #F9F8F6 0%, #E2D9CC 100%);
+      border-bottom: 1px solid rgba(77,115,88,0.15);
       transform-origin: top center;
-      transform: scaleY(1);
-      transition: transform 0.6s var(--ease-out-expo);
+      transform: perspective(900px) rotateX(0deg);
+      transition: transform 0.55s cubic-bezier(0.16,1,0.3,1);
+      will-change: transform;
+      backface-visibility: hidden;
     }
     .slat.open {
-      transform: scaleY(0);
+      transform: perspective(900px) rotateX(88deg);
     }
 
     /* Hero content */
@@ -504,6 +509,10 @@
     @keyframes fadeSlideUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes wordSlideUp {
+      from { transform: translateY(100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     /* ============================================================
@@ -1846,7 +1855,7 @@
 
 <section id="hero">
   <div class="hero-bg">
-    <img src="website_upgrade/images/higgsfield/lb_hero.png" alt="Elegant plantation shutters in a London Georgian townhouse living room" loading="eager" fetchpriority="high">
+    <img src="images/hero-london-shutters.jpg" alt="London Victorian living room with white plantation shutters, golden morning light on herringbone oak floor" loading="eager" fetchpriority="high">
     <div class="hero-overlay"></div>
   </div>
   <!-- Shutter animation overlay -->
@@ -1972,7 +1981,7 @@
 
       <article class="prod-card prod-card--featured" data-category="shutters" data-product="plantation-shutters">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_shutters.png" alt="White plantation shutters in a bright London living room" loading="lazy">
+          <img src="images/product-plantation-shutters.jpg" alt="White full-height plantation shutters on London bay window, louvres at 30 degrees, shadow lines on sill" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Plantation Shutters</h3>
@@ -1983,7 +1992,7 @@
 
       <article class="prod-card" data-category="blinds" data-product="roller-blinds">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_roller.png" alt="Clean roller blind in a minimalist London flat" loading="lazy">
+          <img src="images/product-roller-blinds.jpg" alt="Made-to-measure roller blind in neutral linen fabric inside a London kitchen window recess" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Roller Blinds</h3>
@@ -1994,7 +2003,7 @@
 
       <article class="prod-card" data-category="blinds" data-product="roman-blinds">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_roman.png" alt="Linen Roman blind with soft folds in a London kitchen" loading="lazy">
+          <img src="images/product-roman-blinds.jpg" alt="Natural linen Roman blind with crisp horizontal pleats in a London period bedroom" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Roman Blinds</h3>
@@ -2005,7 +2014,7 @@
 
       <article class="prod-card" data-category="blinds" data-product="venetian-blinds">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_venetian.png" alt="Aluminium venetian blind in a contemporary London office" loading="lazy">
+          <img src="images/product-venetian-blinds.jpg" alt="Basswood Venetian blinds in warm oak finish, slats at 45 degrees over a London home office desk" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Venetian Blinds</h3>
@@ -2016,7 +2025,7 @@
 
       <article class="prod-card" data-category="blinds" data-product="vertical-blinds">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_vertical.png" alt="Vertical blind on a large London patio door" loading="lazy">
+          <img src="images/product-vertical-blinds.jpg" alt="Floor-to-ceiling vertical blinds in light grey fabric across a wide London patio door" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Vertical Blinds</h3>
@@ -2027,7 +2036,7 @@
 
       <article class="prod-card prod-card--soft" data-category="soft" data-product="curtains">
         <div class="prod-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_prod_curtains.png" alt="Bespoke curtains with linen drapes in a London bedroom" loading="lazy">
+          <img src="images/product-curtains-drapes.jpg" alt="Full-length sage green linen curtains on slim brass pole in London Victorian living room" loading="lazy">
         </div>
         <div class="prod-info">
           <h3>Curtains &amp; Drapes</h3>
@@ -2054,7 +2063,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_shutters.png" alt="Plantation shutters available to order online" loading="lazy">
+          <img src="images/shop-plantation-shutters.jpg" alt="Single white plantation shutter panel, 89mm louvres at 45 degrees, clean white window recess" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Plantation Shutters</h3>
@@ -2066,7 +2075,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_roller.png" alt="Roller blinds available to order" loading="lazy">
+          <img src="images/shop-roller-blinds.jpg" alt="Cassette roller blind in warm white fully extended, aluminium cassette headbox visible" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Roller Blinds</h3>
@@ -2078,7 +2087,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_roman.png" alt="Roman blinds available to order" loading="lazy">
+          <img src="images/shop-roman-blinds.jpg" alt="Roman blind fully raised showing five neat pleats stacked in warm oat linen fabric" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Roman Blinds</h3>
@@ -2090,7 +2099,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_venetian.png" alt="Venetian blinds available to order" loading="lazy">
+          <img src="images/shop-venetian-blinds.jpg" alt="Close-up of 25mm aluminium Venetian blind slats in brushed silver showing concave profile" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Venetian Blinds</h3>
@@ -2102,7 +2111,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_vertical.png" alt="Vertical blinds available to order" loading="lazy">
+          <img src="images/shop-vertical-blinds.jpg" alt="White PVC vertical blind vanes hanging from headrail, showing depth and even spacing" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Vertical Blinds</h3>
@@ -2114,7 +2123,7 @@
 
       <div class="shop-item reveal">
         <div class="shop-item-img">
-          <img src="website_upgrade/images/higgsfield/lb_prod_curtains.png" alt="Curtains and drapes available to order" loading="lazy">
+          <img src="images/shop-curtains-drapes.jpg" alt="Pencil pleat curtain heading on brass pole, natural linen in warm stone, shallow depth of field" loading="lazy">
         </div>
         <div class="shop-item-info">
           <h3>Curtains &amp; Drapes</h3>
@@ -2158,7 +2167,7 @@
           <span class="step-num">01</span>
         </div>
         <div class="step-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_hiw_consult.png" alt="Adams Blinds consultation — discussing options with a London homeowner" loading="lazy">
+          <img src="images/process-consultation.jpg" alt="Blinds specialist showing fabric sample book to homeowner during free London home consultation" loading="lazy">
         </div>
         <div class="step-text">
           <h3>Free Consultation</h3>
@@ -2171,7 +2180,7 @@
           <span class="step-num">02</span>
         </div>
         <div class="step-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_hiw_measure.png" alt="Professional window measuring at a London home" loading="lazy">
+          <img src="images/process-measuring.jpg" alt="Specialist hands measuring Victorian sash window recess with tape measure, notepad on sill" loading="lazy">
         </div>
         <div class="step-text">
           <h3>Precise Measuring</h3>
@@ -2184,7 +2193,7 @@
           <span class="step-num">03</span>
         </div>
         <div class="step-img-wrap">
-          <img src="website_upgrade/images/higgsfield/lb_hiw_install.png" alt="Professional blind fitting in a London home" loading="lazy">
+          <img src="images/process-fitting.jpg" alt="Blinds specialist fitting plantation shutters with cordless drill in London Victorian window recess" loading="lazy">
         </div>
         <div class="step-text">
           <h3>Expert Fitting</h3>
@@ -2203,7 +2212,7 @@
 <!-- ============================================================
      REVIEWS SECTION
      ============================================================ -->
-<section id="reviews" class="reviews-section">
+<section id="reviews" class="reviews-section" style="background-image:url('images/reviews-background.jpg');background-size:cover;background-position:center;">
   <div class="reviews-inner">
     <div class="reviews-header reveal">
       <span class="section-label">Customer Reviews</span>
@@ -2264,7 +2273,7 @@
 <section id="about" class="about-section">
   <div class="about-inner">
     <div class="about-img reveal-left">
-      <img src="website_upgrade/images/higgsfield/lb_about.png" alt="Adams Blinds specialist consulting with a London homeowner about window treatments" loading="lazy">
+      <img src="images/about-portrait.jpg" alt="Adams Blinds specialist smiling, white plantation shutters softly blurred behind him" loading="lazy">
       <div class="about-award-badge">
         <span class="award-year">2021</span>
         <span class="award-name">BUILD Award</span>
@@ -2311,7 +2320,10 @@
       <a href="#booking" class="btn-primary">Request Free Samples</a>
     </div>
     <div class="samples-scroll" aria-label="Sample swatches">
-      <div class="samples-track">
+      <div class="samples-photo" style="flex:1;min-width:280px;border-radius:8px;overflow:hidden;max-height:320px;">
+      <img src="images/fabric-samples.jpg" alt="Fabric swatches fan arrangement including linen cream, sage green, terracotta, charcoal and warm sand on oak table" loading="lazy" style="width:100%;height:100%;object-fit:cover;">
+    </div>
+    <div class="samples-track" style="display:none;">
         <div class="swatch" style="background: #F5F0E8;"><span>Linen Cream</span></div>
         <div class="swatch" style="background: #8FAD8A;"><span>Sage Green</span></div>
         <div class="swatch" style="background: #C05D3A;"><span>Terracotta</span></div>
@@ -2548,8 +2560,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      scrollProgress.style.width = pct + '%';
+      scrollProgress.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
     }, { passive: true });
   }
 
@@ -2578,7 +2589,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. SHUTTER ANIMATION
+  // 4. SHUTTER ANIMATION — 18 CSS rotateX slats, staggered delay, trigger on first scroll or 2200ms
   (function() {
     const wrap = document.getElementById('shutterWrap');
     if (!wrap) return;
@@ -2593,37 +2604,34 @@ document.addEventListener('DOMContentLoaded', () => {
       wrap.appendChild(s);
       slats.push(s);
     }
-    function openShutters() {
-      slats.forEach(s => s.classList.add('open'));
-    }
     let triggered = false;
-    function trigger() {
+    function openShutters() {
       if (triggered) return;
       triggered = true;
-      openShutters();
+      slats.forEach(s => s.classList.add('open'));
     }
-    window.addEventListener('scroll', trigger, { once: true, passive: true });
-    setTimeout(trigger, 2200);
+    window.addEventListener('scroll', openShutters, { once: true, passive: true });
+    setTimeout(openShutters, 2200);
   })();
 
   // 5. WORD-BY-WORD H1 REVEAL
   (function() {
     const h1 = document.getElementById('heroHeadline');
-    if (!h1) return;
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const text = h1.innerHTML;
-    const words = text.split(/(\s+|<br>)/);
-    h1.innerHTML = words.map((w, i) => {
+    if (!h1 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const html = h1.innerHTML;
+    const parts = html.split(/(<br>|\s+)/);
+    h1.innerHTML = parts.map((w, i) => {
       if (!w.trim() || w === '<br>') return w;
-      return '<span class="word" style="animation-delay:' + (0.1 + i * 0.06) + 's">' + w + '</span>';
+      return `<span class="word" style="display:inline-block;overflow:hidden;vertical-align:bottom"><span style="display:inline-block;animation:wordSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) ${(0.1 + i * 0.06).toFixed(2)}s both">${w}</span></span>`;
     }).join('');
-    h1.classList.add('words-ready');
   })();
 
   // 6. INTERSECTION OBSERVER — REVEAL ANIMATIONS
   (function() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => el.classList.add('vis'));
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    if (reduced) {
+      els.forEach(el => el.classList.add('vis'));
       return;
     }
     const obs = new IntersectionObserver((entries) => {
@@ -2634,7 +2642,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => obs.observe(el));
+    els.forEach(el => obs.observe(el));
   })();
 
   // 7. STAT COUNTER ANIMATION
@@ -2653,8 +2661,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const duration = 1800;
         const start = performance.now();
         function step(now) {
-          const elapsed = now - start;
-          const progress = Math.min(elapsed / duration, 1);
+          const progress = Math.min((now - start) / duration, 1);
           const eased = 1 - Math.pow(1 - progress, 3);
           el.textContent = Math.round(eased * target);
           if (progress < 1) requestAnimationFrame(step);
@@ -2667,13 +2674,14 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => obs.observe(c));
   })();
 
-  // 8. PRODUCT FILTER BAR with sliding indicator
+  // 8. PRODUCT FILTER BAR — sliding indicator
   (function() {
     const bar = document.querySelector('.filter-bar');
     if (!bar) return;
     const indicator = bar.querySelector('.filter-indicator');
     const btns = bar.querySelectorAll('.filter-btn');
     const grid = document.getElementById('bentoGrid');
+    if (!indicator || !btns.length || !grid) return;
 
     function moveIndicator(btn) {
       const barRect = bar.getBoundingClientRect();
@@ -2683,9 +2691,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const activeBtn = bar.querySelector('.filter-btn.active');
-    if (activeBtn) {
-      requestAnimationFrame(() => moveIndicator(activeBtn));
-    }
+    if (activeBtn) requestAnimationFrame(() => moveIndicator(activeBtn));
 
     btns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -2693,15 +2699,11 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.classList.add('active');
         btn.setAttribute('aria-selected', 'true');
         moveIndicator(btn);
-
         const filter = btn.dataset.filter;
         grid.querySelectorAll('.prod-card').forEach(card => {
-          if (filter === 'all' || card.dataset.category === filter) {
-            card.style.display = '';
-            setTimeout(() => card.classList.add('vis'), 10);
-          } else {
-            card.style.display = 'none';
-          }
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+          if (show) setTimeout(() => card.classList.add('vis'), 10);
         });
       });
     });
@@ -2712,79 +2714,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('productModal');
     const closeBtn = document.getElementById('modalClose');
     const content = document.getElementById('modalContent');
-    if (!modal) return;
+    if (!modal || !closeBtn || !content) return;
 
     const productData = {
       'plantation-shutters': {
         title: 'Plantation Shutters',
-        img: 'website_upgrade/images/higgsfield/lb_prod_shutters.png',
-        alt: 'Plantation shutters in a London townhouse',
-        desc: 'The classic window treatment that never goes out of style. Available in solid hardwood (basswood or cedar) or maintenance-free ABS polymer — perfect for kitchens and bathrooms. Full-height, café-style, and tier-on-tier configurations available. Every shutter is made to measure for your exact window.',
-        features: ['Solid hardwood or ABS polymer', 'Tilt rod or hidden tilt options', 'Any RAL colour or natural wood stain', 'Full-height, café, or tier-on-tier', 'Free measuring and fitting included']
+        img: 'images/product-plantation-shutters.jpg',
+        alt: 'White full-height plantation shutters on a London bay window',
+        desc: 'The classic window treatment that never goes out of style. Available in solid hardwood (basswood or cedar) or maintenance-free ABS polymer. Full-height, cafe-style, and tier-on-tier configurations. Every shutter made to measure for your exact window.',
+        features: ['Solid hardwood or ABS polymer', 'Tilt rod or hidden tilt options', 'Any RAL colour or natural wood stain', 'Full-height, cafe, or tier-on-tier', 'Free measuring and fitting included']
       },
       'roller-blinds': {
         title: 'Roller Blinds',
-        img: 'website_upgrade/images/higgsfield/lb_prod_roller.png',
-        alt: 'Roller blind in a London flat',
-        desc: 'Clean, modern, and endlessly versatile. Roller blinds work in any room — from blackout bedroom solutions to sheer screen fabrics that filter light without blocking views. Available with cassette housing for a neat finish or open-roll for a minimal look.',
-        features: ['Blackout, screen, or sheer fabrics', 'Cassette or open-roll options', 'Chain, spring, or motorised operation', 'Child-safe cordless options available', 'Free measuring and fitting included']
+        img: 'images/product-roller-blinds.jpg',
+        alt: 'Made-to-measure roller blind in neutral linen in a London kitchen',
+        desc: 'Clean, modern, and endlessly versatile. Available in blackout, screen, and sheer fabrics. Cassette housing for a neat finish or open-roll for minimal look. Child-safe cordless options available.',
+        features: ['Blackout, screen, or sheer fabrics', 'Cassette or open-roll options', 'Chain, spring, or motorised operation', 'Child-safe cordless options', 'Free measuring and fitting included']
       },
       'roman-blinds': {
         title: 'Roman Blinds',
-        img: 'website_upgrade/images/higgsfield/lb_prod_roman.png',
-        alt: 'Roman blind in a London kitchen',
-        desc: 'The warmest, most elegant of all blind styles. Roman blinds fold into structured horizontal pleats when raised, creating a classic look that works in every room. Hundreds of fabrics available — from light linens to rich velvets.',
+        img: 'images/product-roman-blinds.jpg',
+        alt: 'Natural linen Roman blind with crisp pleats in a London bedroom',
+        desc: 'The warmest, most elegant blind style. Roman blinds fold into structured horizontal pleats when raised. Hundreds of fabrics available from light linens to rich velvets.',
         features: ['Hundreds of fabric options', 'Lined, interlined, or unlined', 'Blackout lining available', 'Chain or motorised operation', 'Free measuring and fitting included']
       },
       'venetian-blinds': {
         title: 'Venetian Blinds',
-        img: 'website_upgrade/images/higgsfield/lb_prod_venetian.png',
-        alt: 'Venetian blind in a London office',
-        desc: 'The timeless classic. Aluminium venetians in 25mm or 50mm slat widths offer precise control over light and privacy at the tilt of a wand. For a warmer look, real-wood slats bring natural warmth to any interior.',
+        img: 'images/product-venetian-blinds.jpg',
+        alt: 'Basswood Venetian blinds in oak finish in a London home office',
+        desc: 'The timeless classic. Aluminium venetians in 25mm or 50mm slat widths offer precise light and privacy control. Real-wood slats bring natural warmth to any interior.',
         features: ['25mm or 50mm aluminium slats', 'Real-wood options available', 'Wand or cord tilt mechanism', 'Dozens of colours and finishes', 'Free measuring and fitting included']
       },
       'vertical-blinds': {
         title: 'Vertical Blinds',
-        img: 'website_upgrade/images/higgsfield/lb_prod_vertical.png',
-        alt: 'Vertical blind on a London patio door',
-        desc: 'The practical choice for patio doors, bay windows, and wide openings. Vertical blinds stack neatly to one side when open, and the individual vanes rotate for precise light control. Available in fabric, PVC, or faux-suede finishes.',
+        img: 'images/product-vertical-blinds.jpg',
+        alt: 'Floor-to-ceiling vertical blinds across a London patio door',
+        desc: 'The practical choice for patio doors, bay windows, and wide openings. Vertical blinds stack neatly to one side when open. Available in fabric, PVC, or faux-suede finishes.',
         features: ['Fabric, PVC, or faux-suede vanes', 'Left, right, or split-draw options', 'Easy to replace individual vanes', 'Child-safe chain separator standard', 'Free measuring and fitting included']
       },
       'curtains': {
         title: 'Curtains & Drapes',
-        img: 'website_upgrade/images/higgsfield/lb_prod_curtains.png',
-        alt: 'Bespoke curtains in a London bedroom',
-        desc: 'Nothing finishes a room quite like bespoke curtains made to your exact measurements. We work with hundreds of fabrics — from lightweight sheers to heavy blackout-lined velvets. Eyelet, pinch pleat, pencil pleat, or wave heading styles available.',
+        img: 'images/product-curtains-drapes.jpg',
+        alt: 'Sage green linen curtains on brass pole in a London living room',
+        desc: 'Nothing finishes a room quite like bespoke curtains made to your exact measurements. Hundreds of fabrics from lightweight sheers to heavy blackout velvets. Eyelet, pinch pleat, pencil pleat, or wave heading styles.',
         features: ['Made to measure in any fabric', 'Eyelet, pinch pleat, pencil pleat, or wave headings', 'Lined, interlined, or unlined', 'Matching pelmet or valance available', 'Free measuring and fitting included']
       }
     };
 
-    document.querySelectorAll('[data-open]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.dataset.open;
-        const d = productData[key];
-        if (!d) return;
-        content.innerHTML =
-          '<div class="modal-img"><img src="' + d.img + '" alt="' + d.alt + '" loading="lazy"></div>' +
-          '<div class="modal-text">' +
-          '<h3>' + d.title + '</h3>' +
-          '<p>' + d.desc + '</p>' +
-          '<ul>' + d.features.map(f => '<li>' + f + '</li>').join('') + '</ul>' +
-          '<a href="#booking" class="btn-primary" id="modalBooking">Book Free Survey &#8594;</a>' +
-          '</div>';
-        modal.hidden = false;
-        document.body.style.overflow = 'hidden';
-        modal.focus();
-        const modalBooking = document.getElementById('modalBooking');
-        if (modalBooking) modalBooking.addEventListener('click', closeModal);
-      });
-    });
+    function openModal(key) {
+      const d = productData[key];
+      if (!d) return;
+      content.innerHTML =
+        '<div class="modal-img"><img src="' + d.img + '" alt="' + d.alt + '" loading="lazy"></div>' +
+        '<div class="modal-text"><h3>' + d.title + '</h3><p>' + d.desc + '</p>' +
+        '<ul>' + d.features.map(f => '<li>' + f + '</li>').join('') + '</ul>' +
+        '<a href="#booking" class="btn-primary" id="modalBooking">Book Free Survey \u2192</a></div>';
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      document.getElementById('modalBooking').addEventListener('click', closeModal);
+    }
 
     function closeModal() {
       modal.hidden = true;
       document.body.style.overflow = '';
     }
 
+    document.querySelectorAll('[data-open]').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.open));
+    });
     closeBtn.addEventListener('click', closeModal);
     modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && !modal.hidden) closeModal(); });
@@ -2813,7 +2810,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   })();
 
-  // 11. BOOKING FORM SUBMISSION
+  // 11. BOOKING FORM
   (function() {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -2823,44 +2820,61 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        return;
-      }
-      submitBtn.disabled = true;
-      submitBtn.querySelector('.btn-submit-text').textContent = 'Sending\u2026';
-
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      const btnText = submitBtn ? submitBtn.querySelector('.btn-submit-text') : null;
+      if (submitBtn) submitBtn.disabled = true;
+      if (btnText) btnText.textContent = 'Sending\u2026';
       const webhook = form.dataset.webhook;
       const data = Object.fromEntries(new FormData(form));
-
       try {
         if (webhook) {
-          const res = await fetch(webhook, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          });
+          const res = await fetch(webhook, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
           if (!res.ok) throw new Error('Network error');
         }
-        form.style.display = 'none';
-        successEl.hidden = false;
-      } catch (err) {
-        errorEl.hidden = false;
-        submitBtn.disabled = false;
-        submitBtn.querySelector('.btn-submit-text').textContent = 'Book Free Survey';
+        if (form) form.style.display = 'none';
+        if (successEl) successEl.hidden = false;
+      } catch {
+        if (errorEl) errorEl.hidden = false;
+        if (submitBtn) submitBtn.disabled = false;
+        if (btnText) btnText.textContent = 'Book Free Survey';
       }
     });
   })();
 
-  // 12. SMOOTH SCROLL for anchor links
+  // 12. SMOOTH SCROLL
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const target = document.querySelector(a.getAttribute('href'));
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const navH = document.getElementById('nav') ? document.getElementById('nav').offsetHeight : 0;
+      window.scrollTo({ top: target.offsetTop - navH, behavior: 'smooth' });
     });
   });
+
+  // 13. HERO PARALLAX
+  (function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const heroBg = document.querySelector('.hero-bg img');
+    if (!heroBg) return;
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) {
+        heroBg.style.transform = `translateY(${y * 0.15}px)`;
+      }
+    }, { passive: true });
+  })();
+
+  // 14. NAV: add .scrolled class for background
+  (function() {
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+    function updateNav() {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    }
+    updateNav();
+    window.addEventListener('scroll', updateNav, { passive: true });
+  })();
 
 });
 </script>
